@@ -1,0 +1,38 @@
+<html>
+    <meta charset="UTF-8"> 
+    <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="script.js"></script>
+    </head>
+    <body onload="matsuri_ver()">
+        <br><br><br>
+        <div class="row" >
+            <div class="col s12 l3 offset-l1">
+                <h1 id = "header">MiriTools JS</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 l3 offset-l1">
+                <button class="btn waves-effect pink">Github</button>
+                <button class="btn waves-effect pink" id="darkmode_toggle" value = "OFF" onclick="darkmode(this)">Dark Mode</button>
+            </div>
+        </div>
+        <br><br>
+        <div class = "row">
+            <div class="col s12 l3 offset-l1" >
+                <div class="card blue-grey darken-3">
+                    <div class="card-content white-text">
+                        <span class="card-title">
+                            App Version
+                        </span>
+                        <p>
+                            Current Version: <span id = "ver">Loading...</span><br>
+                            Last Updated: <span id = "datever">Loading....</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
