@@ -1,0 +1,32 @@
+<html>
+<meta charset="UTF-8">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="script.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>MiriTools JS</title>
+</head>
+
+<body onload="electionLoader()">
+    <br><br><br>
+    <div class="row">
+        <div class="col s12 l3 offset-l1">
+            <h1 class="dmode_change">MiriTools JS</h1>
+            <br>
+            <button class="btn waves-effect pink" id="darkmode_toggle" value="OFF" onclick="darkMode(this)">Dark Mode</button>
+        </div>
+    </div>
+    <div class="row">
+            <div class="col s12 l6 offset-l1">
+                <h4 class='dmode_change'>Election Rankings <br>(<span id="electionName">Loading Name</span>)</h4>
+            </div>
+        </div>
+        <br>
+        <div id="electionResults">
+        </div>
+    </div>
+</body>
+
+</html>
