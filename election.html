@@ -7,6 +7,9 @@
     <script src="script.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>MiriTools JS</title>
+    <style>
+            #ccNotices { display : none}
+        </style>
 </head>
 
 <body onload="electionLoader()">
@@ -27,6 +30,20 @@
         <div id="electionResults">
         </div>
     </div>
+    <div class = "row">
+            <div class = "col s12 l5 offset-l1">
+                <a href="#ccNotices" onclick = "showCC()">Copyright Notices</a>
+            </div>
+        </div>
+        <div class="row" id="ccNotices">
+            <div class = "col s12 l5 offset-l1">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+                <br>
+                Made using <a href = "https://matsurihi.me">Princess API</a> and <a href="https://materializecss.com/">Materialize</a>
+                <br>
+                All IDOLM@STER related contents belongs to it's original owners.
+            </div>
+            </div>
 </body>
 
 </html>
