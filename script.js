@@ -7,9 +7,7 @@ function loader() {
 }
 
 function electionLoader() {
-    matsuriElectionDramaTable()
-    populateTables()
-    darkModeSetting()
+    matsuriElectionDramaTable().then(populateTables())
 }
 
 function matsuriApi(endpoint) {
@@ -95,7 +93,7 @@ function matsuriRankingCheck() {
     revealButton.remove()
 }
 
-function matsuriElectionDramaTable() {
+async function matsuriElectionDramaTable() {
     matsuriApi("election").then(function applyPage(result) {
         document.getElementById("electionName").innerHTML = result['name'];
         dramaTitles = [];
@@ -140,9 +138,11 @@ function matsuriElectionDramaTable() {
             }
         }
     });
+    console.log("title done")
+    return;
 }
 
-function populateTables() {
+async function populateTables() {
     matsuriApi("election/current").then(function applyPage(result) {
         var scores = result
         for (k in scores) {
@@ -151,9 +151,9 @@ function populateTables() {
             var TableContentElement = document.getElementById(targetElement);
             for (l in scores[k]['data'][0]) {
                 var text = document.createTextNode(scores[k]['data'][0][l]['idol_name'] + " : " + scores[k]['data'][0][l]['score']);
-                var breakline = document.createElement("br")
+                var breakline = document.createElement("br");
                 TableContentElement.appendChild(text);
-                TableContentElement.appendChild(breakline)
+                TableContentElement.appendChild(breakline);
             }
         }
     })
@@ -163,4 +163,5 @@ function populateTables() {
 function showCC() {
     var cc = document.getElementById("ccNotices");
     cc.style.display = "block";
+            
 }
